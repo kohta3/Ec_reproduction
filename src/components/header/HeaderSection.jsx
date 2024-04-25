@@ -3,7 +3,6 @@ import { FarzaaContext } from '../../context/FarzaaContext'
 import Link from 'next/link'
 import HeaderNav from '../navigation/HeaderNav'
 import WishlistModal from '../modal/WishlistModal'
-import CartModal from '../modal/CartModal'
 
 const HeaderSection = () => {
     const {

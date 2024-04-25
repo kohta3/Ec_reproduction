@@ -120,7 +120,7 @@ const allProductList = [
         imgSrc:"assets/images/fz-3-pro-2.png",
         name:"Dark Brown Door",
         category:"Solid Color Door",
-        price:740.00,
+        price:750.00,
         isInWishlist:false,
     },{
         id:1,

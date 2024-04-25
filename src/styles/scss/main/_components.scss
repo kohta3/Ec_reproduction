@@ -647,7 +647,7 @@
 .fz-inner-page-breadcrumb {
     text-align: center;
     background-color: #f8f8f8;
-    padding: 50px 0;
+    padding: 10px 0;
 
     @include sm {
         padding: 40px;
@@ -659,7 +659,7 @@
             text-transform: capitalize;
             font-family: $poppins;
             font-weight: 600;
-            margin-bottom: 15px;
+            margin-bottom: 0;
 
             @include lg {
                 font-size: 30px;
@@ -682,19 +682,25 @@
     &-nav {
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: left;
         gap: 10px;
         font-family: $roboto;
         font-size: 14px;
         font-weight: 400;
         line-height: 1;
         text-transform: capitalize;
+        margin-left: 10px;
 
         li.current-page {
             padding-left: 10px;
             border-left: 1px solid $black;
             color: $color-3;
-            font-weight: 500;
+            font-weight: 500
+        }
+
+        li.current-before-page {
+            padding-left: 10px;
+            border-left: 1px solid $black;
         }
     }
 }

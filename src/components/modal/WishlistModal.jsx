@@ -5,7 +5,6 @@ import { FarzaaContext } from '../../context/FarzaaContext';
 import { useRouter } from 'next/navigation'
 
 const WishlistModal = ({ wishlistArray, removeItem }) => {
-  console.log(wishlistArray);
   const { showWishlist, handleWishlistClose, addWishlistToCart } = useContext(FarzaaContext);
     const navigate = useRouter(); // Initialize the useNavigate hook
 
