@@ -3,7 +3,7 @@ import { FarzaaContext } from '../../context/FarzaaContext';
 import { allProductList } from '../../data/Data';
 
 const categories = [
-    { name: null, label: 'All Door' },
+    { name: null, label: 'すべての商品' },
     { name: 'Plastic Door', label: 'Plastic Door' },
     { name: 'Wooden Door', label: 'Wooden Door' },
     { name: 'Double Layer Door', label: 'Double layer Door' },

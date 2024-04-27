@@ -108,7 +108,7 @@ const ProductReviewTabPane = () => {
                     <div className="single-review">
                         <div className="user">
                             <div className="user-img">
-                                <img src="assets/images/user-1.png" alt="user"/>
+                                <img src="/assets/images/user-1.png" alt="user"/>
                             </div>
                             <div className="user-info">
                                 <h6 className="user-name">Eliza nolan</h6>
@@ -133,7 +133,7 @@ const ProductReviewTabPane = () => {
                     <div className="single-review">
                         <div className="user">
                             <div className="user-img">
-                                <img src="assets/images/user-2.png" alt="user"/>
+                                <img src="/assets/images/user-2.png" alt="user"/>
                             </div>
                             <div className="user-info">
                                 <h6 className="user-name">Abu Amer</h6>
@@ -158,7 +158,7 @@ const ProductReviewTabPane = () => {
                     <div className="single-review">
                         <div className="user">
                             <div className="user-img">
-                                <img src="assets/images/user-3.png" alt="user"/>
+                                <img src="/assets/images/user-3.png" alt="user"/>
                             </div>
                             <div className="user-info">
                                 <h6 className="user-name">Brunt glenn</h6>
@@ -183,7 +183,7 @@ const ProductReviewTabPane = () => {
                     <div className="single-review">
                         <div className="user">
                             <div className="user-img">
-                                <img src="assets/images/user-4.png" alt="user"/>
+                                <img src="/assets/images/user-4.png" alt="user"/>
                             </div>
                             <div className="user-info">
                                 <h6 className="user-name">chad hossain</h6>

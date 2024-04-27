@@ -149,7 +149,6 @@ const FarzaaContextProvider = ({ children }) => {
     setPrice(newPrice);
   };
 
-
   // All Product Filter
   const [filteredProducts, setFilteredProducts] = useState(allProductList);
   const [sortBy, setSortBy] = useState('');

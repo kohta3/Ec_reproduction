@@ -97,7 +97,7 @@ const CollectionSection = () => {
                     filteredItemList.slice(0,5).map((item)=>(
                         <SwiperSlide className="fz-1-single-product wood-door" key={item.id}>
                             <div className="fz-single-product__img">
-                                <img src={item.imgSrc} alt="Product Image"/>
+                                <img src={item.imgSrc[0]} alt="Product Image"/>
                                 <div className="fz-single-product__actions">
                                     <button 
                                     className="fz-add-to-wishlist-btn"

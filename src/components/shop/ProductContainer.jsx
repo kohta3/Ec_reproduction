@@ -22,7 +22,7 @@ const ProductContainer = () => {
              <div className="col-xl-4 col-md-4 col-6 col-xxs-12" key={item.id}>
                 <div className="fz-1-single-product">
                     <div className="fz-single-product__img">
-                        <img src={item.imgSrc} alt={item.name}/>
+                        <img src={item.imgSrc[0]} alt={item.name}/>
                         <div className="fz-single-product__actions">
                             <button 
                             className="fz-add-to-wishlist-btn"
@@ -32,7 +32,7 @@ const ProductContainer = () => {
                                 <span className="btn-icon">{item.isInWishlist? (<i className="fa-solid fa-heart"></i>):(<i className="fa-light fa-heart"></i>)}</span>
                             </button>
 
-                            <button 
+                            {/* <button 
                             className="fz-add-to-cart-btn"
                             onClick={() => addToCart(item.id)}
                             >
@@ -43,16 +43,16 @@ const ProductContainer = () => {
                             <button className="fz-add-to-compare-btn">
                                 <span className="btn-txt">select to compare</span>
                                 <span className="btn-icon"><i className="fa-light fa-arrow-right-arrow-left"></i></span>
-                            </button>
+                            </button> */}
                         </div>
                     </div>
 
                     <div className="fz-single-product__txt">
                         <span className="fz-single-product__category list-view-text">{item.category}</span>
-                        <Link href="/shopDetails" className="fz-single-product__title">{item.name}</Link>
+                        <Link href={`/shop/${item.id}`} className="fz-single-product__title">{item.name}</Link>
                         <div className="fz-single-product__price-rating">
                             <p className="fz-single-product__price">
-                                <span className="current-price">${item.price}</span>
+                                <span className="current-price">&yen;{parseInt(item.price,10).toLocaleString()}</span>
                             </p>
 
                             <div className="rating list-view-text">
@@ -78,7 +78,7 @@ const ProductContainer = () => {
                                 <span className="btn-icon">{item.isInWishlist? (<i className="fa-solid fa-heart"></i>):(<i className="fa-light fa-heart"></i>)}</span>
                             </button>
 
-                            <button 
+                            {/* <button 
                             className="fz-add-to-cart-btn"
                             onClick={() => addToCart(item.id)}
                             >
@@ -89,7 +89,7 @@ const ProductContainer = () => {
                             <button className="fz-add-to-compare-btn">
                                 <span className="btn-txt">select to compare</span>
                                 <span className="btn-icon"><i className="fa-light fa-arrow-right-arrow-left"></i></span>
-                            </button>
+                            </button> */}
                         </div>
                     </div>
                 </div>

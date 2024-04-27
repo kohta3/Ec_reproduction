@@ -8,11 +8,13 @@ const ShopDetailsMain = () => {
     { label: "商品一覧", url: "/shop" },
     { label: "商品詳細", url: "./" }
   ]);
+
+
   return (
     <>
-        <BreadcrumbSection title={"Shop Details"} current={currents}/>
-        <ProductDetailSection/>
-        <RelatedProductSection/>
+      <BreadcrumbSection title={"Shop Details"} current={currents}/>
+      <ProductDetailSection/>
+      <RelatedProductSection/>
     </>
   )
 }

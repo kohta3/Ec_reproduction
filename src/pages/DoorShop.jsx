@@ -1,7 +1,7 @@
 import React from 'react'
 import HeaderSection from '../components/header/HeaderSection'
 import FooterSection from '../components/footer/FooterSection'
-import DoorShopMain from '../components/main/DoorShopMain'
+import DoorShopMain from '../components/main/homeMain'
 import RightSideBar from '../components/sidebar/RightSideBar'
 
 const HomePage1 = () => {

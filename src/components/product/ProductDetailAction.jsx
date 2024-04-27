@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const ProductDetailAction = () => {
+const ProductDetailAction = (props) => {
     const defaultQuantity = 1;
     const [quantity, setQuantity] = useState(defaultQuantity);
 
@@ -11,7 +11,7 @@ const ProductDetailAction = () => {
     };
   return (
     <div className="fz-product-details__actions">
-        <div className="fz-product-details__quantity cart-product__quantity">
+        {/* <div className="fz-product-details__quantity cart-product__quantity">
             <button className="minus-btn cart-product__minus" onClick={() => handleQuantityChange(quantity - 1)}>
                 <i className="fa-light fa-minus"></i>
             </button>
@@ -26,8 +26,8 @@ const ProductDetailAction = () => {
             <button className="plus-btn cart-product__plus" onClick={() => handleQuantityChange(quantity + 1)}>
                 <i className="fa-light fa-plus"></i>
             </button>
-        </div>
-        <button className="fz-product-details__add-to-cart">Add to cart</button>
+        </div> */}
+        <button className="fz-product-details__add-to-cart" onClick={()=>{window.location.href = props.url}}>購入する</button>
         <button className="fz-product-details__add-to-wishlist"><i className="fa-light fa-heart"></i></button>
     </div>
   )

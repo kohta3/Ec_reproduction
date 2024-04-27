@@ -55,7 +55,7 @@ const BannerSection = () => {
                                     <div className="col-lg-6 col-md-5 align-self-end">
                                         <div className="fz-1-banner-img-container">
                                             <div className="sticker-container">
-                                                <img src="assets/images/sticker.png" alt="Sticker" className="sticker"/>
+                                                <img src="/assets/images/sticker.png" alt="Sticker" className="sticker"/>
                                                 <span>25k</span>
                                             </div>
 

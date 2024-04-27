@@ -76,7 +76,7 @@ const BlogDetailSection = () => {
                         <div className="single-review single-comment">
                             <div className="user">
                                 <div className="user-img">
-                                    <img src="assets/images/user-4.png" alt="user"/>
+                                    <img src="/assets/images/user-4.png" alt="user"/>
                                 </div>
                                 <div className="user-info">
                                     <h6 className="user-name">Abu Amer</h6>

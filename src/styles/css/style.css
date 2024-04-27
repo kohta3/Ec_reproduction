@@ -60,7 +60,7 @@ TABLE OF CONTENTS:
 /* Medium Version */
 @font-face {
   font-family: "Futura PT";
-  src: url("/public/assets/fonts/futuraptmedium.otf");
+  src: url("/assets/fonts/futuraptmedium.otf");
   font-weight: 500;
 }
 /* Light Version */
@@ -5002,7 +5002,7 @@ a.fz-hamburger {
 }
 
 .subs-section {
-  background: url(/public/assets/images/fz-3-subs-bg.png) no-repeat center center;
+  background: url(/assets/images/fz-3-subs-bg.png) no-repeat center center;
   background-size: cover;
   padding: 100px 0;
   color: #ffffff;

@@ -72,7 +72,7 @@ const TestimonialSlider = () => {
 
                 <div className="fz-reviewer">
                   <div className="fz-reviewer-img">
-                    <img src="assets/images/user-1.png" alt="Person image" />
+                    <img src="/assets/images/user-1.png" alt="Person image" />
                   </div>
 
                   <div className="fz-reviewer-info">
@@ -102,7 +102,7 @@ const TestimonialSlider = () => {
 
                 <div className="fz-reviewer">
                   <div className="fz-reviewer-img">
-                    <img src="assets/images/user-1.png" alt="Person image" />
+                    <img src="/assets/images/user-1.png" alt="Person image" />
                   </div>
 
                   <div className="fz-reviewer-info">
@@ -132,7 +132,7 @@ const TestimonialSlider = () => {
 
                 <div className="fz-reviewer">
                   <div className="fz-reviewer-img">
-                    <img src="assets/images/user-1.png" alt="Person image" />
+                    <img src="/assets/images/user-1.png" alt="Person image" />
                   </div>
 
                   <div className="fz-reviewer-info">

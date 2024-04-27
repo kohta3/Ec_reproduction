@@ -17,7 +17,7 @@ const RelatedProductSection = () => {
                    <div className="col-lg-3 col-md-4 col-6 col-xxs-12" key={item.id}>
                     <div className="fz-1-single-product">
                         <div className="fz-single-product__img">
-                            <img src={item.imgSrc} alt="Product Image"/>
+                            <img src={item.imgSrc[0]} alt="Product Image"/>
                             <div className="fz-single-product__actions">
                                 <button 
                                 className="fz-add-to-wishlist-btn"

@@ -554,3 +554,13 @@
         margin-bottom: 15px;
     }
 }
+
+.mainThumbnail{
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}
+
+.subThumbnail{
+    aspect-ratio: 1/1;
+    object-fit: contain;
+}

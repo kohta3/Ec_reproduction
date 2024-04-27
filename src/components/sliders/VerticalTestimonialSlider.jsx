@@ -60,7 +60,7 @@ const VerticalTestimonialSlider = () => {
 
                 <div className="fz-3-reviewer">
                   <div className="fz-3-reviewer-img">
-                    <img src="assets/images/user-1.png" alt="Person image" />
+                    <img src="/assets/images/user-1.png" alt="Person image" />
                   </div>
 
                   <div className="fz-3-reviewer-info">
@@ -93,7 +93,7 @@ const VerticalTestimonialSlider = () => {
 
                 <div className="fz-3-reviewer">
                   <div className="fz-3-reviewer-img">
-                    <img src="assets/images/user-1.png" alt="Person image" />
+                    <img src="/assets/images/user-1.png" alt="Person image" />
                   </div>
 
                   <div className="fz-3-reviewer-info">
@@ -126,7 +126,7 @@ const VerticalTestimonialSlider = () => {
 
                 <div className="fz-3-reviewer">
                   <div className="fz-3-reviewer-img">
-                    <img src="assets/images/user-1.png" alt="Person image" />
+                    <img src="/assets/images/user-1.png" alt="Person image" />
                   </div>
 
                   <div className="fz-3-reviewer-info">

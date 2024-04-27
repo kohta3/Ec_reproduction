@@ -74,7 +74,7 @@ const HeaderSection = () => {
                     <div className="col-lg-2 col-md-6 col-9">
                         <div className="fz-logo-container text-lg-center text-start">
                             <Link href="/">
-                                <img src='assets/images/logo-3.png' alt="logo" className="fz-logo"/>
+                                <img src='/assets/images/logo-3.png' alt="logo" className="fz-logo"/>
                             </Link>
                         </div>
                     </div>
