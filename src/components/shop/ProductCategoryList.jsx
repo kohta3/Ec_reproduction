@@ -4,8 +4,8 @@ import { allProductList } from '../../data/Data';
 
 const categories = [
     { name: null, label: 'すべての商品' },
-    { name: 'Plastic Door', label: 'Plastic Door' },
-    { name: 'Wooden Door', label: 'Wooden Door' },
+    { name: 'ホエイプロテイン', label: 'ホエイプロテイン' },
+    { name: 'ソイプロテイン', label: 'ソイプロテイン' },
     { name: 'Double Layer Door', label: 'Double layer Door' },
     { name: 'Chinese Door', label: 'Chinese Door' },
     { name: 'Steel Door', label: 'Steel Door' },

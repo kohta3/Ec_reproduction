@@ -14,7 +14,34 @@ const MobileMenuSection = ({ navigate }) => {
       </a>
       <nav className="mean-nav">
         <div className="align-items-center justify-content-center mobile-menu-list-items">
-          <div className="fz-dropdown fz-nav-item">
+          <div className="fz-nav-item mean-last">
+            <a
+              role="button"
+              onClick={() => navigate("/")}
+              className="fz-nav-link"
+            >
+              ホーム
+            </a>
+          </div>
+          <div className="fz-nav-item mean-last">
+            <a
+              role="button"
+              onClick={() => navigate("/shop")}
+              className="fz-nav-link"
+            >
+              商品一覧
+            </a>
+          </div>
+          <div className="fz-nav-item mean-last">
+            <a
+              role="button"
+              onClick={() => navigate("/contact")}
+              className="fz-nav-link"
+            >
+              お問い合わせ
+            </a>
+          </div>
+          {/* <div className="fz-dropdown fz-nav-item">
             <a role="button" className="fz-nav-link">
               <span>Home</span>
               <i
@@ -215,7 +242,7 @@ const MobileMenuSection = ({ navigate }) => {
             >
               Contact
             </a>
-          </div>
+          </div> */}
         </div>
       </nav>
     </div>

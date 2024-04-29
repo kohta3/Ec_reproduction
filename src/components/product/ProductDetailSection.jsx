@@ -49,10 +49,10 @@ const ProductDetailSection = () => {
                                     id="descr-tab" 
                                     role="button"
                                 >
-                                    Description
+                                    商品の詳細
                                 </Nav.Link>
                             </Nav.Item>
-                            <Nav.Item className="nav-item" role="presentation">
+                            {/* <Nav.Item className="nav-item" role="presentation">
                                 <Nav.Link 
                                     className="nav-link" 
                                     eventKey='review'
@@ -61,7 +61,7 @@ const ProductDetailSection = () => {
                                 >
                                     Reviews
                                 </Nav.Link>
-                            </Nav.Item>
+                            </Nav.Item> */}
                         </Nav>
                         <Tab.Content>
                             <Tab.Pane eventKey='description' className={`tab-pane ${activeTab === 'description' ? 'show active' : ''}`}>

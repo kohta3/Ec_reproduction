@@ -19,7 +19,7 @@ const ProductViewFilter = () => {
     <div className="product-view-actions">
         <div className="row gy-3 align-items-center">
             <div className="col-xxl-6 col-xl-6 col-lg-5 col-6 col-xxs-12 text-center text-md-start">
-                <p className="text-center text-sm-start"> Showing {startItem}-{endItem} of {totalProducts} results</p>
+                <p className="text-center text-sm-start"> {totalProducts} 件中 {startItem}-{endItem} 件を表示</p>
             </div>
 
             <div className="col-xxl-6 col-xl-6 col-lg-7 col-6 col-xxs-12 col-sm-6">
@@ -37,11 +37,11 @@ const ProductViewFilter = () => {
                     <div className="product-sorting d-inline-block">
                         <form className="" action="#">
                             <Form.Select className="nice-select" onChange={handleSortChange} value={sortBy}>
-                            <option value="">Default</option>
-                            <option value="name-az">By Name (A to Z)</option>
-                            <option value="name-za">By Name (Z to A)</option>
-                            <option value="price-low-high">By Price (Low to High)</option>
-                            <option value="price-high-low">By Price (High to Low)</option>
+                            <option value="">表示順</option>
+                            <option value="name-az">商品名(昇順)</option>
+                            <option value="name-za">商品名(降順)</option>
+                            <option value="price-low-high">価格(低～高)</option>
+                            <option value="price-high-low">価格(高～低)</option>
                             </Form.Select>
                         </form>
                     </div>

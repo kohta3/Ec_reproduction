@@ -11,7 +11,7 @@ const RelatedProductSection = () => {
   return (
     <section className="related-product-section">
         <div className="container">
-            <h2 className="related-product__title">Related Products</h2>
+            <h2 className="related-product__title">関連の商品</h2>
             <div className="row gy-sm-4 g-3 justify-content-center">
                 {paginatedProducts.slice(0,4).map((item) => (
                    <div className="col-lg-3 col-md-4 col-6 col-xxs-12" key={item.id}>

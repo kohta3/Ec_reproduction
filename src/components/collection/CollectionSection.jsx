@@ -34,55 +34,8 @@ const CollectionSection = () => {
     <section className="fz-1-latest-collection">
         <div className="container">
             <div className="fz-1-section-heading">
-                <h2 className="fz-section-title">Latest Collection</h2>
+                <h2 className="fz-section-title">Latest Collection <span className='fz-section-sub-title'>新着商品</span></h2>
             </div>
-
-            <Nav 
-            activeKey={activeTab}
-            onSelect={handleTabChange}
-            className="filter-navs"
-            >
-                <Nav.Item>
-                    <Nav.Link eventKey='all' role='button'>
-                        <span className="filter-nav-order">01</span>
-                        <span className="filter-nav-name">All Door</span>
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey='Solid Color Door' role='button'>
-                        <span className="filter-nav-order">02</span>
-                        <span className="filter-nav-name">Solid Color Door</span>
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey='Double Layer Door' role='button'>
-                        <span className="filter-nav-order">03</span>
-                        <span className="filter-nav-name">Double Layer Door</span>
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey='Chinese Door' role='button'>
-                        <span className="filter-nav-order">04</span>
-                        <span className="filter-nav-name">Chinese Door</span>
-                    </Nav.Link>
-                </Nav.Item>
-                <Nav.Item>
-                    <Nav.Link eventKey='Plastic Door' role='button'>
-                        <span className="filter-nav-order">05</span>
-                        <span className="filter-nav-name">Plastic Door</span>
-                    </Nav.Link>
-                </Nav.Item>
-
-                <div className="fz-1-latest-products-slider-nav" ref={swiperRef}>
-                    <button type="button" className="product-prev" onClick={goPrev}>
-                        <i className="fa-regular fa-angle-left"></i>
-                    </button>
-                    <button type="button" className="product-next" onClick={goNext}>
-                        <i className="fa-regular fa-angle-right"></i>
-                    </button>
-                </div>                
-            </Nav>
-
 
             <Swiper
                 slidesPerView={slides}
@@ -106,26 +59,13 @@ const CollectionSection = () => {
                                         <span className="btn-txt">add To wishlist</span>
                                         <span className="btn-icon">{item.isInWishlist? (<i className="fa-solid fa-heart"></i>):(<i className="fa-light fa-heart"></i>)}</span>
                                     </button>
-
-                                    <button 
-                                    className="fz-add-to-cart-btn"
-                                    onClick={() => addToCart(item.id)}
-                                    >
-                                        <span className="btn-txt">add To cart</span>
-                                        <span className="btn-icon"><i className="fa-light fa-cart-shopping"></i></span>
-                                    </button>
-
-                                    <button className="fz-add-to-compare-btn">
-                                        <span className="btn-txt">select to compare</span>
-                                        <span className="btn-icon"><i className="fa-light fa-arrow-right-arrow-left"></i></span>
-                                    </button>
                                 </div>
                             </div>
 
                             <div className="fz-single-product__txt">
                                 <Link href="/shopDetails" className="fz-single-product__title">{item.name}</Link>
                                 <p className="fz-single-product__price">
-                                    <span className="current-price">${item.price}</span>
+                                    <span className="current-price">&yen;{item.price.toLocaleString()}</span>
                                 </p>
                             </div>
                         </SwiperSlide> 

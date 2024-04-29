@@ -49,7 +49,9 @@ const ProductContainer = () => {
 
                     <div className="fz-single-product__txt">
                         <span className="fz-single-product__category list-view-text">{item.category}</span>
-                        <Link href={`/shop/${item.id}`} className="fz-single-product__title">{item.name}</Link>
+                        <div style={{ flexGrow: 1 }}>
+                            <Link href={`/shop/${item.id}`} className="fz-single-product__title">{item.name}</Link>
+                        </div>
                         <div className="fz-single-product__price-rating">
                             <p className="fz-single-product__price">
                                 <span className="current-price">&yen;{parseInt(item.price,10).toLocaleString()}</span>

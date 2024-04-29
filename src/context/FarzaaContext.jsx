@@ -141,8 +141,8 @@ const FarzaaContextProvider = ({ children }) => {
     setIsListView(false)
   }
   // Price Filter
-  const [startPrice, setStartPrice] = useState(20);
-  const [endPrice, setEndPrice] = useState(500);
+  const [startPrice, setStartPrice] = useState(0);
+  const [endPrice, setEndPrice] = useState(5000);
   const [price, setPrice] = useState([startPrice, endPrice]);
 
   const handlePriceChange = (event, newPrice) => {

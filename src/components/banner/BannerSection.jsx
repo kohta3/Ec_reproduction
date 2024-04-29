@@ -43,10 +43,6 @@ const BannerSection = () => {
                                             <h1 className="text5">{item.title}</h1>
 
                                             <div className="fz-1-banner-txt__btns">
-                                                <button className="fz-1-banner-vid-btn" data-video-id="SwZynNzqBys" onClick={handleVideoShow}>
-                                                    <i className="fa-solid fa-play"></i>
-                                                </button>
-
                                                 <Link href="/shop" className="fz-1-banner-btn">View More <i className="fa-light fa-arrow-up-right"></i></Link>
                                             </div>
                                         </div>

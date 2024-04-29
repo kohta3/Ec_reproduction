@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation'
 import { FarzaaContext } from '../../context/FarzaaContext';
 
+
 const RightSideBar = () => {
     const { isSidebarOpen, handleSidebarClose } = useContext(FarzaaContext);
     const navigate = useRouter(); // Initialize the useNavigate hook
@@ -11,7 +12,7 @@ const RightSideBar = () => {
     // Function to close the modal and navigate
     const closeAndNavigate = (path) => {
       handleSidebarClose();
-      navigate(path);
+      navigate.push(path);
     };
     return (
         <div className={`fz-offcanvas-main-nav-wrapper ${isSidebarOpen ? 'open' : ''}`}>

@@ -217,7 +217,7 @@ img {
             font-size: 25px;
         }
     }
-
+    
     .fz-section-sub-title {
         font-size: 16px;
         font-weight: 400;
@@ -292,6 +292,32 @@ img {
 
         @include xs {
             font-size: 25px;
+        }
+    }
+
+    .fz-section-sub-title {
+        font-size: 33px;
+        font-weight: 400;
+        color: #616161;
+
+        @include xl {
+            font-size: 25px;
+        }
+
+        @include lg {
+            font-size: 20px;
+        }
+
+        @include md {
+            font-size: 15px;
+        }
+
+        @include sm {
+            font-size: 12px;
+        }
+
+        @include xs {
+            font-size: 10px;
         }
     }
 }
