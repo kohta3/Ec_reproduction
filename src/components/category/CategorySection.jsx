@@ -17,7 +17,7 @@ const CategorySection = () => {
                     </Link>
 
                     <Link href="/shop" className="fz-1-single-category">
-                        <img src="/assets/images/vegetable_daizu.png" alt="Product Icon"/>
+                        <img src="/assets/images/top-bunner/1218946_m.jpg" alt="Product Icon"/>
                         <h5 className="fz-1-single-category__title">SOY (154)</h5>
                     </Link>
                 </div>

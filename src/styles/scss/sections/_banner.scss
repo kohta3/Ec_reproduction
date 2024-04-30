@@ -668,10 +668,10 @@
 // INDEX-1 BANNER STYLES
 .fz-1-banner-section {
     background-color: #f8f8f8;
-    padding-top: 110px;
+    padding-top: 30px;
 
     @include xl {
-        padding-top: 60px;
+        padding-top: 20px;
     }
 
     .fz-1-banner-single-slide {
@@ -998,5 +998,16 @@
 
     100% {
         box-shadow: 0 0 0 35px transparent, 0 0 0 25px transparent, 0 0 0 15px transparent;
+    }
+}
+
+.bannerRight{
+    padding: 0;
+    img{
+        min-height: 100%;
+        object-fit: cover;
+        @include sm {
+            display: none;
+        }
     }
 }

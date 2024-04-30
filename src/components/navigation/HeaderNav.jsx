@@ -8,44 +8,6 @@ const HeaderNav = ({position}) => {
             <li className="fz-nav-item"><Link href="/" className="fz-nav-link">ホーム</Link></li>
             <li className="fz-nav-item"><Link href="/shop" className="fz-nav-link">商品一覧</Link></li>
             <li className="fz-nav-item"><Link href="/contact" className="fz-nav-link">お問い合わせ</Link></li>
-            {/* <li className="fz-dropdown fz-nav-item">
-                <a role="button" className="fz-nav-link"><span>home</span> <i className="fa-regular fa-plus"></i></a>
-
-                <ul className="fz-submenu">
-                    <li><Link href="/" className="fz-nav-link fz-submenu-nav-link">Door Shop</Link></li>
-                    <li><Link href="/jewelleryShop" className="fz-nav-link fz-submenu-nav-link">Shop</Link></li>
-                    <li><Link href="/cakeShop" className="fz-nav-link fz-submenu-nav-link">Cake Shop</Link></li>
-                </ul>
-            </li>
-            <li className="fz-dropdown fz-nav-item">
-                <a role="button" className="fz-nav-link"><span>shop</span> <i className="fa-regular fa-plus"></i></a>
-
-                <ul className="fz-submenu">
-                    <li><Link href="/shop" className="fz-nav-link fz-submenu-nav-link">Shop</Link></li>
-                    <li><Link href="/shopDetails" className="fz-nav-link fz-submenu-nav-link">Shop details</Link></li>
-                </ul>
-            </li>
-            <li className="fz-dropdown fz-nav-item">
-                <a role="button" className="fz-nav-link"><span>pages</span> <i className="fa-regular fa-plus"></i></a>
-
-                <ul className="fz-submenu">
-                    <li><Link href="/about" className="fz-nav-link fz-submenu-nav-link">About</Link></li>
-                    <li><Link href="/faq" className="fz-nav-link fz-submenu-nav-link">FAQ</Link></li>
-                    <li><Link href="/wishlist" className="fz-nav-link fz-submenu-nav-link">Wishlist</Link></li>
-                    <li><Link href="/cart" className="fz-nav-link fz-submenu-nav-link">Cart</Link></li>
-                    <li><Link href="/account" className="fz-nav-link fz-submenu-nav-link">Account</Link></li>
-                    <li><Link href="/checkout" className="fz-nav-link fz-submenu-nav-link">Checkout</Link></li>
-                </ul>
-            </li>
-            <li className="fz-dropdown fz-nav-item">
-                <a role="button" className="fz-nav-link">blog <i className="fa-regular fa-plus"></i></a>
-
-                <ul className="fz-submenu">
-                    <li><Link href="/blog" className="fz-nav-link fz-submenu-nav-link">Blog</Link></li>
-                    <li><Link href="/blogDetails" className="fz-nav-link fz-submenu-nav-link">Blog-details</Link></li>
-                </ul>
-            </li>
-            <li className="fz-nav-item"><Link href="/contact" className="fz-nav-link">Contact</Link></li> */}
         </ul>
     </nav>
   )

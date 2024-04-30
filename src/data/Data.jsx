@@ -2,17 +2,17 @@ const firstBannerData = [
     {
         id:0,
         title:"The Perfect Door For Every Occasion",
-        imgSrc:"/assets/images/fz-3-banner-img-3.jpg",
+        imgSrc:"/assets/images/top-bunner/mamemaki1726_TP_V.jpg",
     },
     {
         id:1,
         title:"Make your entrance a grand one",
-        imgSrc:"/assets/images/fz-3-banner-img-2.jpg",
+        imgSrc:"/assets/images/top-bunner/susiagfaIMGL3667_TP_V.jpg",
     },
     {
         id:2,
         title:"The Secret Key to a Stylish Home",
-        imgSrc:"/assets/images/fz-3-banner-img.png",
+        imgSrc:"/assets/images/top-bunner/TPK0I9A3553_TP_V.jpg",
     },
 ]
 
