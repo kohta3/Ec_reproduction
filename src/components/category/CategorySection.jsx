@@ -37,7 +37,7 @@ const CategorySection = () => {
                     </Link>
 
                     <Link href="/shop?category=casein" className="fz-1-single-category" style={{position:"relative"}}>
-                        <img src="/assets/images/top-bunner/casein_protein.png" alt="Product Icon" fill style={{maxHeight:"100%"}}/>
+                        <Image src="/assets/images/top-bunner/casein_protein.png" alt="Product Icon" fill style={{maxHeight:"100%"}}/>
                         <h5 className="fz-1-single-category__title">CASEIN (54)</h5>
                     </Link>
                 </div>
