@@ -6,7 +6,7 @@ const ProductPriceFilter = () => {
     const {price,handlePriceChange,handlePriceFilter} = useContext(FarzaaContext)
     return (
         <section className="sidebar-single-area price-filter-area">
-            <h3 className="sidebar-single-area__title">Filter by price</h3>
+            <h3 className="sidebar-single-area__title">価格で絞り込み</h3>
             <div className="slider-keypress">
                 <Slider
                     getAriaLabel={() => 'Price range'}

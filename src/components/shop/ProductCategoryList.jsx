@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState,useEffect } from 'react';
 import { FarzaaContext } from '../../context/FarzaaContext';
 import { allProductList } from '../../data/Data';
 
@@ -6,17 +6,22 @@ const categories = [
     { name: null, label: 'すべての商品' },
     { name: 'ホエイプロテイン', label: 'ホエイプロテイン' },
     { name: 'ソイプロテイン', label: 'ソイプロテイン' },
-    { name: 'Double Layer Door', label: 'Double layer Door' },
-    { name: 'Chinese Door', label: 'Chinese Door' },
-    { name: 'Steel Door', label: 'Steel Door' },
-    { name: 'Solid Color Door', label: 'Solid Color Door' },
-    { name: 'Panel Door', label: 'Panel door' },
-    { name: 'Security Door', label: 'Security door' }
+    { name: '混合プロテイン', label: '混合プロテイン' },
+    { name: 'カゼインプロテイン', label: 'カゼインプロテイン' }
 ];
 
 const ProductCategoryList = () => {
     const { handleCategoryFilter } = useContext(FarzaaContext);
     const [activeCategory, setActiveCategory] = useState(null);
+
+    useEffect(() => {
+        const queryParams = new URLSearchParams(window.location.search);
+        const categoryFromURL = queryParams.get('category');
+        
+        if (categoryFromURL && categories.some(category => category.name === categoryFromURL)) {
+            handleCategoryClick("ホエイプロテイン");
+        }
+    }, []); 
 
     const handleCategoryClick = (category) => {
         handleCategoryFilter(category);
@@ -25,7 +30,7 @@ const ProductCategoryList = () => {
 
     return (
         <section className="sidebar-single-area product-categories-area">
-            <h3 className="sidebar-single-area__title">Product categories</h3>
+            <h3 className="sidebar-single-area__title">カテゴリー</h3>
             <ul className="product-categories">
                 {categories.map(categoryObj => (
                     <li

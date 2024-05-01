@@ -63,7 +63,7 @@ const CollectionSection = () => {
                             </div>
 
                             <div className="fz-single-product__txt">
-                                <Link href="/shopDetails" className="fz-single-product__title">{item.name}</Link>
+                                <Link href={`/shop/${item.id}`} className="fz-single-product__title">{item.name}</Link>
                                 <p className="fz-single-product__price">
                                     <span className="current-price">&yen;{item.price.toLocaleString()}</span>
                                 </p>
