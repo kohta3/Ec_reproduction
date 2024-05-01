@@ -3,8 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Autoplay } from 'swiper/modules';
 import { FarzaaContext } from '../../context/FarzaaContext';
 import { firstBannerData } from '../../data/Data';
-import Link from 'next/link';
-import VideoModal from '../modal/VideoModal';
+import Image from 'next/image';
 
 const BannerSection = () => {
     const {handleVideoShow} = useContext(FarzaaContext)
@@ -38,34 +37,8 @@ const BannerSection = () => {
                     >
                         {firstBannerData.map((item)=>(
                             <SwiperSlide className="fz-1-banner-single-slide" key={item.id}>
-                                <img src={item.imgSrc} alt="Sticker"  />
-                                
-                                {/* <div className="container position-relative">
-                                    <div className="row">
-                                        <div className="col-lg-6 col-md-7">
-                                            <div className="fz-1-banner-txt">
-                                                <h1 className="text5">{item.title}</h1>
+                                <Image src={item.imgSrc} alt="Sticker" width={1000} height={1000} />
 
-                                                <div className="fz-1-banner-txt__btns">
-                                                    <Link href="/shop" className="fz-1-banner-btn">View More <i className="fa-light fa-arrow-up-right"></i></Link>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div className="col-lg-6 col-md-5 align-self-end">
-                                            <div className="fz-1-banner-img-container">
-                                                <div className="sticker-container">
-                                                    <img src="/assets/images/sticker.png" alt="Sticker" className="sticker"/>
-                                                    <span>25k</span>
-                                                </div>
-
-                                                <div className="fz-1-banner-img">
-                                                    <img src={item.imgSrc} alt="Product Images"/>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> */}
                             </SwiperSlide> 
                         ))}           
                         <div className="owl-nav">
@@ -77,8 +50,8 @@ const BannerSection = () => {
                             </button>
                         </div>
                     </Swiper>
-                    <div className='col-md-3 bannerRight'>
-                        <img src="/assets/images/header-side.png" alt="" />
+                    <div className='col-md-3 bannerRight' style={{position:"relative"}}>
+                        <Image src="/assets/images/header-side.png" alt="bunnerRightImage" sizes='100vw' fill style={{ maxHeight: '100%'}}/>
                     </div>
                 </div>
         </section>
