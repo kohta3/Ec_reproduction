@@ -33,12 +33,11 @@ const BannerSection = () => {
                             nextEl: 'owl-next',
                         }}
                         modules={[Navigation, Autoplay]}
-                        style={{marginLeft:0,marginRight:0}}
+                        style={{marginLeft:0,marginRight:0,height:"100%"}}
                     >
                         {firstBannerData.map((item)=>(
-                            <SwiperSlide className="fz-1-banner-single-slide" key={item.id}>
-                                <Image src={item.imgSrc} alt="Sticker" width={1000} height={1000} />
-
+                            <SwiperSlide className="fz-1-banner-single-slide" key={item.id} style={{position:"relative"}}>
+                              <Image src={item.imgSrc} alt="Sticker" width={1000} height={1000} style={{width:"100%"}} />
                             </SwiperSlide> 
                         ))}           
                         <div className="owl-nav">
@@ -51,7 +50,7 @@ const BannerSection = () => {
                         </div>
                     </Swiper>
                     <div className='col-md-3 bannerRight' style={{position:"relative"}}>
-                        <Image src="/assets/images/header-side.png" alt="bunnerRightImage" sizes='100vw' fill style={{ maxHeight: '100%'}}/>
+                        <Image src="/assets/images/header-side.png" alt="bunnerRightImage" width={1000} height={1000} style={{width:"100%"}} decoding='async' />
                     </div>
                 </div>
         </section>

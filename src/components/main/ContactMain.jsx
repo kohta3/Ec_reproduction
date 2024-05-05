@@ -10,7 +10,7 @@ const ContactMain = () => {
     <>
         <BreadcrumbSection title={"Contact Page"} current={currents}/>
         <ContactSection/>
-        <LocationSection/>
+        {/* <LocationSection/> */}
     </>
   )
 }

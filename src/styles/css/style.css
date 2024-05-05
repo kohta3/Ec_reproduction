@@ -9158,11 +9158,12 @@ input[type=number].cart-product-quantity-input {
   }
 }
 .fz-inner-contact-details__left {
-  width: 70%;
+  width: 94%;
+  margin: auto;
 }
 @media screen and (max-width: 1199px) {
   .fz-inner-contact-details__left {
-    width: 65%;
+    width: 90%;
   }
 }
 @media screen and (max-width: 991px) {
