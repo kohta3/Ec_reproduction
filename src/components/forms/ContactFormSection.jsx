@@ -1,45 +1,117 @@
+
+import { useState, useEffect } from 'react';
 import React from 'react';
 const ContactFormSection = () => {
 
-  const isValidEmail = (email) => {
-    // Basic email validation
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  };
+    const [fullName, setFullName] = useState(false);
+    const [email, setEmail] = useState(false);
+    const [confirm, setConfirm] = useState(false);
+    const [type, setType] = useState(false);
+    const [selectedType, setSelectedType] = useState("");
+    const [about, setAbout] = useState(false);
+    const [allow, setAllow] = useState(false);
 
-  return (
-      <div className="container mt-5">
-        <h2 className="mb-4">お問い合わせフォーム</h2>
-        <form>
-            <div className="mb-3">
-                <label for="name" className="form-label">名前</label>
-                <input type="text" className="form-control" id="name" required />
-            </div>
-            <div className="mb-3">
-                <label for="email" className="form-label">アドレス</label>
-                <input type="email" className="form-control" id="email" required />
-            </div>
-            <div className="mb-3">
-                <label for="inquiry" className="form-label">問い合わせの内容</label>
-                <select className="form-select" id="inquiry" required>
-                    <option selected disabled value="">選択してください</option>
-                    <option value="product">商品について</option>
-                    <option value="service">サービスについて</option>
-                    <option value="other">その他</option>
-                </select>
-            </div>
-            <div className="mb-3">
-                <label for="details" className="form-label">問い合わせ詳細</label>
-                <textarea className="form-control" id="details" rows="4" required></textarea>
-            </div>
-            <div className="mb-3 form-check">
-                <input type="checkbox" style={{width:"fitContent"}} id="privacy" required />
-                <label className="form-check-label" for="privacy">個人情報の取り扱いに同意する</label>
-            </div>
-            <button type="submit" className="btn btn-primary">送信</button>
-        </form>
-    </div>
-  );
+    const isValidEmail = (email) => {
+        const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return pattern.test(email);
+    };
+
+    const confirmEmail = (confirm) => {
+        const getElementByEmail = document.getElementById('email').value;
+        return getElementByEmail === confirm;
+    }
+
+    const isEmpty = (text) => {
+        return text.trim().length > 0;
+    }
+
+    function handleFullName(event) {
+        setFullName(isEmpty(event.target.value));
+    }
+
+    const handleEmail = (event) => {
+        setEmail(isValidEmail(event.target.value));
+    }
+
+    const handleConfirm = (event) => {
+        setConfirm(confirmEmail(event.target.value));
+    }
+
+    const handleType = (event) => {
+        setType(isEmpty(event.target.value));
+        setSelectedType(event.target.value);
+    }
+
+    const handleAbout = (event) => {
+        setAbout(isEmpty(event.target.value));
+    }
+
+    const handleAllow = (bool) => {        
+        setAllow(bool.target.checked);
+    }
+
+    useEffect(() => {
+        const submitBtn = document.getElementById('submit');
+        if (fullName&&email&&confirm&&type&&about&&allow) {
+            submitBtn.disabled = false;
+        }else{
+            submitBtn.disabled = true;
+        }
+    }, [fullName,email,confirm,type,about,allow]);
+
+    async function sendContact(event) {
+        event.preventDefault();
+        const formData = new FormData(event.currentTarget);
+        try {
+            const response = await fetch('/api/user/' + id, {
+                method: 'POST',
+                body: JSON.stringify(Object.fromEntries(formData)),
+            });
+            const data = await response.json();
+            console.log(data);
+        } catch (error) {
+            console.error('Error:', error);
+        }
+    }
+
+    return (
+        <div className="container mt-1">
+            <h2 className="w-100 mb-5" style={{ textAlign: "center" }}>Contact</h2>
+            <form>
+                <div className="mb-3">
+                    <label htmlFor="name" className="form-label">お名前<em className='inputNeed'>必須</em></label>
+                    <input type="text" className={"form-control" + (fullName?" border-success ":" border-danger ")} id="name" required onChange={(e) => { handleFullName(e) }} />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="email" className="form-label">メールアドレス<em className='inputNeed'>必須</em></label>
+                    <input type="email" className={"form-control" + (email?" border-success ":" border-danger ")} id="email" required onChange={(e) => { handleEmail(e) }} />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="confirm" className="form-label">確認メールアドレス<em className='inputNeed'>必須</em></label>
+                    <input type="email" className={"form-control" + (confirm?" border-success ":" border-danger ")} id="confirm" required onChange={(e) => { handleConfirm(e) }} />
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="inquiry" className="form-label">お問い合わせフォーム<em className='inputNeed'>必須</em></label>
+                    <select value={selectedType} className={"form-select" + (type?" border-success ":" border-danger ")} id="inquiry" required onChange={(e) => { handleType(e) }}>
+                        <option defaultValue disabled value="">選択してください</option>
+                        <option value="product">商品について</option>
+                        <option value="service">サービスについて</option>
+                        <option value="other">その他</option>
+                    </select>
+                </div>
+                <div className="mb-3">
+                    <label htmlFor="details" className="form-label">お問い合わせ<em className='inputNeed'>必須</em></label>
+                    <textarea className={"form-control" + (about?" border-success ":" border-danger ")} id="details" rows="4" required onChange={(e) => { handleAbout(e) }}></textarea>
+                </div>
+                <div className="mb-3">
+                    <label className="form-check-label" htmlFor="allowed" style={{ width: "auto" }}>
+                        <input type="checkbox" className={(allow?" border-success ":" border-danger ")} id="allowed" style={{ marginRight: "10px" }} required checked={allow} onChange={handleAllow} />個人情報の取り扱いに同意する<em className='inputNeed'>必須</em>
+                    </label>
+                </div>
+                <button type="submit" className="btn btn-dark w-100" id='submit' disabled onSubmit={(e)=>{sendContact(e)}}>送信</button>
+            </form>
+        </div>
+    );
 };
 
 export default ContactFormSection;
