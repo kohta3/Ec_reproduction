@@ -674,6 +674,22 @@
         padding-top: 20px;
     }
 
+    .flex-banner{
+        height: 80vh;
+        @include md {
+            height:50vh;
+        }
+
+        @include sm {
+            height:30vh;
+        }
+
+        img{
+            min-width: 100%;
+            height: 100%;
+        }
+    }
+
     .fz-1-banner-single-slide {
         overflow: hidden;
 

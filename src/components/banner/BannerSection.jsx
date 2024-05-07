@@ -22,7 +22,7 @@ const BannerSection = () => {
     }
   return (
     <section className="fz-1-banner-section">
-                <div className='row justify-content-center'>
+                <div className='row justify-content-center align-items-stretch flex-banner'>
                     <Swiper
                         ref={swiperRef}
                         slidesPerView={1}
@@ -37,7 +37,7 @@ const BannerSection = () => {
                     >
                         {firstBannerData.map((item)=>(
                             <SwiperSlide className="fz-1-banner-single-slide" key={item.id} style={{position:"relative"}}>
-                              <Image src={item.imgSrc} alt="Sticker" width={1000} height={1000} style={{width:"100%"}} />
+                              <Image src={item.imgSrc} alt="Sticker" width={1000} height={1000} style={{height:"100%",objectFit:"cover"}} />
                             </SwiperSlide> 
                         ))}           
                         <div className="owl-nav">
@@ -49,8 +49,8 @@ const BannerSection = () => {
                             </button>
                         </div>
                     </Swiper>
-                    <div className='col-md-3 bannerRight' style={{position:"relative"}}>
-                        <Image src="/assets/images/header-side.png" alt="bunnerRightImage" width={1000} height={1000} style={{width:"100%"}} decoding='async' />
+                    <div className='col-md-3 bannerRight' style={{position:"relative",height:"100%"}}>
+                        <Image src="/assets/images/header-side.png" alt="bunnerRightImage" width={1000} height={1000} style={{maxHeight:"100%"}} decoding='async' />
                     </div>
                 </div>
         </section>
