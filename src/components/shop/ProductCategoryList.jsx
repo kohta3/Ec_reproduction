@@ -1,4 +1,4 @@
-import React, { useContext, useState,useEffect } from 'react';
+import React, { useContext, useState,useEffect,useCallback } from 'react';
 import { FarzaaContext } from '../../context/FarzaaContext';
 import { allProductList } from '../../data/Data';
 import { useSearchParams } from "next/navigation";
