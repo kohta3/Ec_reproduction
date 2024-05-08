@@ -563,6 +563,16 @@ useEffect(() => {
   // random ornament array
   const [randomizedItems, setRandomizedItems] = useState([]);
 
+  // Function to shuffle an array using Fisher-Yates algorithm
+  const shuffleArray = useCallback((array) => {
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    return shuffledArray;
+  },[]);
+
   useEffect(() => {
     // Shuffle the array and store the shuffled order initially
     const shuffledItems = shuffleArray(jeweleryArray);
@@ -805,16 +815,6 @@ useEffect(() => {
         toast.warning('Item not found in allProductList.');
       }
     };
-
-  // Function to shuffle an array using Fisher-Yates algorithm
-  const shuffleArray = useCallback((array) => {
-    const shuffledArray = [...array];
-    for (let i = shuffledArray.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-    }
-    return shuffledArray;
-  },[]);
 
   // Right Sidebar
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
