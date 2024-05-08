@@ -67,10 +67,6 @@ const FarzaaContextProvider = ({ children }) => {
     seconds: 0,
   });
 
-  useEffect(() => {
-    setInterval(() => setNewTime(), 1000);
-  }, [setNewTime]);
-
   const setNewTime = useCallback(() => {
     if (countdownDate) {
       const currentTime = new Date().getTime();
@@ -101,6 +97,11 @@ const FarzaaContextProvider = ({ children }) => {
     }
   }, [countdownDate])
 
+  
+  useEffect(() => {
+    setInterval(() => setNewTime(), 1000);
+  }, [setNewTime]);
+  
   // Product Quick View Modal
   const [isProductViewOpen, setIsProductViewOpen] = useState(false)
 
