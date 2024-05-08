@@ -2,8 +2,8 @@ import React from 'react'
 import BannerSection from '../banner/BannerSection'
 import CategorySection from '../category/CategorySection'
 import CollectionSection from '../collection/CollectionSection'
-import OfferSection from '../offer/OfferSection'
 import HeadSection from "../commonMeta/HeadSection";
+import FeaturedProducts from "../featured/FeaturedProducts"
 
 const DoorShopMain = () => {
   return (
@@ -12,14 +12,8 @@ const DoorShopMain = () => {
         <BannerSection/>
         <CategorySection/>
         <CollectionSection/>
-        {/* <SubscriptionSection/> */}
-        {/* <FeaturedProducts/> */}
+        <FeaturedProducts/>
         {/* <FeaturedSection/> */}
-        {/* <OfferSection/> */}
-        {/* <ModernDoorSection/> */}
-        {/* <BlogSection/> */}
-        {/* <BrandSection/> */}
-        {/* <GallerySection/> */}
     </main>
   )
 }

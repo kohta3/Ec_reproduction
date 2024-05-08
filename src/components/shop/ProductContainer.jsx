@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { FarzaaContext } from '../../context/FarzaaContext'
 import Link from 'next/link'
+import Image from "next/image";
 
 const ProductContainer = () => {
     const {
@@ -13,15 +14,15 @@ const ProductContainer = () => {
         <div className="row justify-content-center">
             {paginatedProducts.length === 0 ? (
                 <div className='no-product-area'>
-                    <h3 className='no-product-text'>No Products Available</h3>
-                    <p className='no-product-desc'>We're sorry. We cannot find any matches for your search term.</p>
+                    <h3 className='no-product-text'>{`No Products Available`}</h3>
+                    <p className='no-product-desc'>{`We're sorry. We cannot find any matches for your search term.`}</p>
                 </div>
             ):(
               paginatedProducts.map((item) => (
              <div className="col-xl-4 col-md-4 col-6 col-xxs-12" key={item.id}>
                 <div className="fz-1-single-product">
-                    <div className="fz-single-product__img">
-                        <img src={item.imgSrc[0]} alt={item.name}/>
+                    <div className="fz-single-product__img" style={{position:"relative"}}>
+                        <Image src={item.imgSrc[0]} alt={item.name} width={1000} height={1000} style={{width:"100%"}}/>
                         <div className="fz-single-product__actions">
                             <button 
                             className="fz-add-to-wishlist-btn"

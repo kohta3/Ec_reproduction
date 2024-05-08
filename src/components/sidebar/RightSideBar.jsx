@@ -76,10 +76,10 @@ const RightSideBar = () => {
                         </div>
 
                         <div className="fz-offcanvas-main-socials mt-45">
-                            <Link href="#"><i className="fa-brands fa-facebook-f"></i><i className="fa-brands fa-facebook-f"></i></Link>
-                            <Link href="#"><i className="fa-brands fa-twitter"></i><i className="fa-brands fa-twitter"></i></Link>
-                            <Link href="#"><i className="fa-brands fa-instagram"></i><i className="fa-brands fa-instagram"></i></Link>
-                            <Link href="#"><i className="fa-brands fa-youtube"></i><i className="fa-brands fa-youtube"></i></Link>
+                            <Link href="./"><i className="fa-brands fa-facebook-f"></i><i className="fa-brands fa-facebook-f"></i></Link>
+                            <Link href="./"><i className="fa-brands fa-twitter"></i><i className="fa-brands fa-twitter"></i></Link>
+                            <Link href="./"><i className="fa-brands fa-instagram"></i><i className="fa-brands fa-instagram"></i></Link>
+                            <Link href="./"><i className="fa-brands fa-youtube"></i><i className="fa-brands fa-youtube"></i></Link>
                         </div>
 
                     </div>

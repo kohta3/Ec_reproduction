@@ -3,6 +3,7 @@ import { FarzaaContext } from '../../context/FarzaaContext'
 import Link from 'next/link'
 import HeaderNav from '../navigation/HeaderNav'
 import WishlistModal from '../modal/WishlistModal'
+import Image from 'next/image'
 
 const HeaderSection = () => {
     const {
@@ -29,8 +30,8 @@ const HeaderSection = () => {
 
                     <div className="col-lg-2 col-md-6 col-9">
                         <div className="fz-logo-container text-lg-center text-start">
-                            <Link href="/">
-                                <img src='/assets/images/logo-3.png' alt="logo" className="fz-logo"/>
+                            <Link href="/" style={{position:"relative"}}>
+                                <Image src='/assets/images/logo-3.png' alt="logo" className="fz-logo" width={400} height={500} style={{width:"100%"}} />
                             </Link>
                         </div>
                     </div>

@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { FarzaaContext } from '../../context/FarzaaContext'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const FeaturedProducts = () => {
     const {
@@ -12,15 +13,15 @@ const FeaturedProducts = () => {
     <section className="featured-product-section">
         <div className="container">
             <div className="fz-1-section-heading">
-                <h2 className="fz-section-title">Featured Product</h2>
+                <h2 className="fz-section-title">Featured Product <span className='fz-section-sub-title'>おすすめ商品</span></h2>
             </div>
 
             <div className="row gy-4">
                 {filteredProducts.slice(-2).map((item) => (
                   <div className="col-6 col-xxs-12" key={item.id}>
                     <div className="fz-feat-single-product fz-1-single-product">
-                        <div className="fz-single-product__img">
-                            <img src={item.imgSrc} alt="Product image"/>
+                        <div className="fz-single-product__img" style={{position:"relative"}}>
+                            <Image src={item.imgSrc[0]} alt="Product image" width={500} height={500} />
                             <span className="fz-single-product__tag">-30%</span>
 
                             <div className="fz-single-product__actions">

@@ -1,5 +1,5 @@
 import { allCakeList, allProductList, blogList, ornamentList } from '../data/Data';
-import { createContext, useEffect, useRef, useState } from 'react';
+import { createContext, useCallback, useEffect, useRef, useState } from 'react';
 import { toast } from 'react-toastify';
 
 const defaultContextValue = {
@@ -69,9 +69,9 @@ const FarzaaContextProvider = ({ children }) => {
 
   useEffect(() => {
     setInterval(() => setNewTime(), 1000);
-  }, []);
+  }, [setNewTime]);
 
-  const setNewTime = () => {
+  const setNewTime = useCallback(() => {
     if (countdownDate) {
       const currentTime = new Date().getTime();
 
@@ -99,7 +99,7 @@ const FarzaaContextProvider = ({ children }) => {
 
       setIsTimerState({ days: days, hours: hours, minutes, seconds });
     }
-  };
+  }, [countdownDate])
 
   // Product Quick View Modal
   const [isProductViewOpen, setIsProductViewOpen] = useState(false)
@@ -566,7 +566,7 @@ useEffect(() => {
     // Shuffle the array and store the shuffled order initially
     const shuffledItems = shuffleArray(jeweleryArray);
     setRandomizedItems(shuffledItems);
-  }, []); // Empty dependency array, so the shuffle is done once on mount
+  }, [shuffleArray]); // Empty dependency array, so the shuffle is done once on mount
 
   const handleRemoveJeweleryItemWishlist = (itemId) => {
     const updatedItems = jeweleryWishlist.filter(item => item.id !== itemId);
@@ -806,14 +806,14 @@ useEffect(() => {
     };
 
   // Function to shuffle an array using Fisher-Yates algorithm
-  const shuffleArray = (array) => {
+  const shuffleArray = useCallback((array) => {
     const shuffledArray = [...array];
     for (let i = shuffledArray.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
     }
     return shuffledArray;
-  };
+  },[]);
 
   // Right Sidebar
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);

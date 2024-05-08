@@ -14,10 +14,10 @@ const FooterSection = () => {
                         <div className="fz-footer-widget">
                             <h5 className="fz-footer-widget__title">サイトについて</h5>
                             <ul>
-                                <li><Link href="#">Shop on Facebook</Link></li>
-                                <li><Link href="#">Shop on Ebay</Link></li>
+                                <li><Link href="./">Shop on Facebook</Link></li>
+                                <li><Link href="./">Shop on Ebay</Link></li>
                                 <li><Link href="/shop">Shop All</Link></li>
-                                <li><Link href="#">Coupons and Discounts</Link></li>
+                                <li><Link href="./">Coupons and Discounts</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -26,11 +26,11 @@ const FooterSection = () => {
                         <div className="fz-footer-widget">
                             <h5 className="fz-footer-widget__title">商品一覧</h5>
                             <ul>
-                                <li><Link href="#">全て</Link></li>
-                                <li><Link href="#">ホエイプロテイン</Link></li>
-                                <li><Link href="#">ソイプロテイン</Link></li>
-                                <li><Link href="#">混合プロテイン</Link></li>
-                                <li><Link href="#">カゼインプロテイン</Link></li>
+                                <li><Link href="/shop">全て</Link></li>
+                                <li><Link href="/shop?category=ホエイプロテイン">ホエイプロテイン</Link></li>
+                                <li><Link href="/shop?category=ソイプロテイン">ソイプロテイン</Link></li>
+                                <li><Link href="/shop?category=混合プロテイン">混合プロテイン</Link></li>
+                                <li><Link href="/shop?category=カゼインプロテイン">カゼインプロテイン</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -41,9 +41,9 @@ const FooterSection = () => {
                             <ul>
                                 <li><Link href="/about">Our Story</Link></li>
                                 <li><Link href="/blog">Blog & Press</Link></li>
-                                <li><Link href="#">Order History</Link></li>
-                                <li><Link href="#">Wish List</Link></li>
-                                <li><Link href="#">Terms & Conditions</Link></li>
+                                <li><Link href="./">Order History</Link></li>
+                                <li><Link href="./">Wish List</Link></li>
+                                <li><Link href="./">Terms & Conditions</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -53,7 +53,7 @@ const FooterSection = () => {
                             <h5 className="fz-footer-widget__title">ストアの情報</h5>
                             <ul>
                                 <li>
-                                    <Link href="#"><i className="fa-light fa-location-dot"></i> 16 Rr 2, Ketchikan, Alaska 99901, USA</Link>
+                                    <Link href="./"><i className="fa-light fa-location-dot"></i> 16 Rr 2, Ketchikan, Alaska 99901, USA</Link>
                                 </li>
                                 <li>
                                     <Link href="tel:9072254144"><i className="fa-light fa-phone"></i> (907) 225-4144</Link>

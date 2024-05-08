@@ -1,4 +1,5 @@
 import React from 'react'
+import Image from 'next/image'
 
 const ProductReviewTabPane = () => {
   return (
@@ -107,8 +108,8 @@ const ProductReviewTabPane = () => {
                 <div className="col-xl-6">
                     <div className="single-review">
                         <div className="user">
-                            <div className="user-img">
-                                <img src="/assets/images/user-1.png" alt="user"/>
+                            <div className="user-img" style={{position:"relative"}}>
+                                <Image src="/assets/images/user-1.png" alt="user" width={1000} height={1000} style={{width:"100%"}}/>
                             </div>
                             <div className="user-info">
                                 <h6 className="user-name">Eliza nolan</h6>
@@ -132,8 +133,8 @@ const ProductReviewTabPane = () => {
                 <div className="col-xl-6">
                     <div className="single-review">
                         <div className="user">
-                            <div className="user-img">
-                                <img src="/assets/images/user-2.png" alt="user"/>
+                            <div className="user-img" style={{position:"relative"}}>
+                                <Image src="/assets/images/user-2.png" alt="user" width={1000} height={1000} style={{width:"100%"}}/>
                             </div>
                             <div className="user-info">
                                 <h6 className="user-name">Abu Amer</h6>
@@ -157,8 +158,8 @@ const ProductReviewTabPane = () => {
                 <div className="col-xl-6">
                     <div className="single-review">
                         <div className="user">
-                            <div className="user-img">
-                                <img src="/assets/images/user-3.png" alt="user"/>
+                            <div className="user-img" style={{position:"relative"}}>
+                                <Image src="/assets/images/user-3.png" alt="user" width={1000} height={1000} style={{width:"100%"}}/>
                             </div>
                             <div className="user-info">
                                 <h6 className="user-name">Brunt glenn</h6>
@@ -182,8 +183,8 @@ const ProductReviewTabPane = () => {
                 <div className="col-xl-6">
                     <div className="single-review">
                         <div className="user">
-                            <div className="user-img">
-                                <img src="/assets/images/user-4.png" alt="user"/>
+                            <div className="user-img" style={{position:"relative"}}>
+                                <Image src="/assets/images/user-4.png" alt="user" width={1000} height={1000} style={{width:"100%"}}/>
                             </div>
                             <div className="user-info">
                                 <h6 className="user-name">chad hossain</h6>

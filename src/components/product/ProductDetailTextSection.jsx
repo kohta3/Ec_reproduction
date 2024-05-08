@@ -1,5 +1,6 @@
 import React from 'react'
 import ProductDetailAction from './ProductDetailAction';
+import Image from 'next/image'
 
 const ProductDetailTextSection = (props) => {
     const product = props.product;
@@ -26,7 +27,7 @@ const ProductDetailTextSection = (props) => {
                     </ul>
                 </div>
 
-                <p className="fz-product-details__short-descr">
+                <div className="fz-product-details__short-descr">
                     <ul>
                         {!product?"<li>loading</li>":
                             product.description.map((description,index) => (
@@ -34,12 +35,12 @@ const ProductDetailTextSection = (props) => {
                             ))
                         }
                     </ul>
-                </p>
+                </div>
 
                 <ProductDetailAction url={!product?"loading":product.affiliate} />
 
-                <div className="fz-product-details__payment-methods">
-                    <img src="/assets/images/card.png" alt="Pyament Methods" />
+                <div className="fz-product-details__payment-methods" style={{position:"relative"}}>
+                    <Image src="/assets/images/card.png" alt="Pyament Methods" width={1000} height={1000} style={{width:"100%"}} />
                     <span className="dialog">Guaranteed safe & secure checkout</span>
                 </div>
             </div>

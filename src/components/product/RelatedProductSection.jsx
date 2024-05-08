@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { FarzaaContext } from '../../context/FarzaaContext'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const RelatedProductSection = () => {
     const {
@@ -16,8 +17,8 @@ const RelatedProductSection = () => {
                 {paginatedProducts.slice(0,4).map((item) => (
                    <div className="col-lg-3 col-md-4 col-6 col-xxs-12" key={item.id}>
                     <div className="fz-1-single-product">
-                        <div className="fz-single-product__img">
-                            <img src={item.imgSrc[0]} alt="Product Image"/>
+                        <div className="fz-single-product__img" style={{position:"relative"}}>
+                            <Image src={item.imgSrc[0]} alt="Product Image" width={1000} height={1000} style={{width:"100%"}}/>
                             <div className="fz-single-product__actions">
                                 <button 
                                 className="fz-add-to-wishlist-btn"

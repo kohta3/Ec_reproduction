@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useState } from 'react';
 import Slider from 'react-slick';
+import Image from 'next/image';
 
 const ProductDetailSlider = (props) => {
   const product = props.product;
@@ -37,18 +38,18 @@ const ProductDetailSlider = (props) => {
     <>
       <Slider className="fz-product-details__img-slider" {...imgSliderSettings} ref={mainImageRef}>
         {!product?(
-          <img src="/assets/images/loading.png" alt="Product Image" />):(
+          <Image src="/assets/images/loading.png" alt="Product Image" width={1000} height={500} />):(
         product.imgSrc.map((img,index)=>(
-          <img key={index} src={img} alt="Product Image" className='mainThumbnail'/>)
+          <Image key={index} src={img} alt="Product Image" className='mainThumbnail' width={1000} height={500}/>)
         ))}
         
       </Slider>
 
       <Slider className="fz-product-details__img-nav" {...imgNavSettings}>
         {!product?(
-            <img src="/assets/images/loading.png" alt="Product Image" />):(
+            <Image src="/assets/images/loading.png" alt="Product Image" width={1000} height={500}/>):(
           product.imgSrc.map((img,index)=>(
-            <img key={index} src={img} alt="Product Image" className='subThumbnail' />)
+            <Image key={index} src={img} alt="Product Image" className='subThumbnail' width={1000} height={500}/>)
           ))}
       </Slider>
     </>

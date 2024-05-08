@@ -4,6 +4,7 @@ import { Navigation } from 'swiper/modules';
 import { Nav } from 'react-bootstrap';
 import { FarzaaContext } from '../../context/FarzaaContext';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const CollectionSection = () => {
     const {addToCart,addToWishlist,paginatedProducts,slides} = useContext(FarzaaContext)
@@ -49,8 +50,8 @@ const CollectionSection = () => {
                 {
                     filteredItemList.slice(0,5).map((item)=>(
                         <SwiperSlide className="fz-1-single-product wood-door" key={item.id}>
-                            <div className="fz-single-product__img">
-                                <img src={item.imgSrc[0]} alt="Product Image"/>
+                            <div className="fz-single-product__img" style={{position:"relative"}}>
+                                <Image src={item.imgSrc[0]} alt="Product Image" width={1000} height={1000} />
                                 <div className="fz-single-product__actions">
                                     <button 
                                     className="fz-add-to-wishlist-btn"

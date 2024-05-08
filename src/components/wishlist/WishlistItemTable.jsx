@@ -1,6 +1,7 @@
 import { useContext } from 'react'
 import { FarzaaContext } from '../../context/FarzaaContext'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const WishlistItemTable = ({wishlistArray,removeItem}) => {
     const {addToCartFromWishlist} = useContext(FarzaaContext)
@@ -23,8 +24,8 @@ const WishlistItemTable = ({wishlistArray,removeItem}) => {
                         <tr key={item.id}>
                             <td>
                                 <div className="cart-product">
-                                    <div className="cart-product__img">
-                                        <img src={item.imgSrc} alt="Product Image"/>
+                                    <div className="cart-product__img" style={{position:"relative"}}>
+                                        <Image src={item.imgSrc} alt="Product Image" width={1000} height={1000} style={{width:"100%"}}/>
                                     </div>
                                     <div className="cart-product__txt">
                                         <h6><Link href="/shopDetails">{item.name}</Link></h6>
