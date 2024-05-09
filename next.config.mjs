@@ -2,8 +2,13 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['m.media-amazon.com'], // 許可するホスト名を指定
-  },
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'm.media-amazon.com'
+      },
+    ]
+  }
 };
 
 export default nextConfig;
