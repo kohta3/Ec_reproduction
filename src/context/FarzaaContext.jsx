@@ -577,7 +577,7 @@ useEffect(() => {
     // Shuffle the array and store the shuffled order initially
     const shuffledItems = shuffleArray(jeweleryArray);
     setRandomizedItems(shuffledItems);
-  }, [shuffleArray]); // Empty dependency array, so the shuffle is done once on mount
+  }, [jeweleryArray,shuffleArray]); // Empty dependency array, so the shuffle is done once on mount
 
   const handleRemoveJeweleryItemWishlist = (itemId) => {
     const updatedItems = jeweleryWishlist.filter(item => item.id !== itemId);
@@ -607,7 +607,7 @@ useEffect(() => {
     }
   };
 
-  const updateIsInWishlist = (itemsArray) => {
+  const updateIsInWishlist = useCallback((itemsArray) => {
     return itemsArray.map(item => {
       if (jeweleryWishlist.some(wishlistItem => wishlistItem.id === item.id)) {
         return {
@@ -621,12 +621,12 @@ useEffect(() => {
         };
       }
     });
-  };
+  },[jeweleryWishlist]);
 
   useEffect(() => {
     setJeweleryArray(prevFilteredProducts => updateIsInWishlist(prevFilteredProducts));
     setRandomizedItems(prevRandomizedItems => updateIsInWishlist(prevRandomizedItems));
-  }, [jeweleryWishlist]);
+  }, [updateIsInWishlist]);
 
   // Jewelery add to cart array
   const [jeweleryAddToCart, setJeweleryAddToCart] = useState([]);
@@ -697,7 +697,7 @@ useEffect(() => {
     // Create a new shuffled array for the second state variable
     const shuffledCakesSecond = shuffleArray(cakeSlice.slice()); // Create a copy of cakeSlice before shuffling
     setRandomizedCakesSecond(shuffledCakesSecond);
-  }, []); // Empty dependency array, so the shuffle is done once on mount
+  }, [cakeSlice,shuffleArray]); // Empty dependency array, so the shuffle is done once on mount
 
   // Wishlist
 
@@ -735,7 +735,7 @@ useEffect(() => {
       toast.error('Item not found in All Cake List.');
     }
   };
-  const updateIsInCakeWishlist = (itemsArray) => {
+  const updateIsInCakeWishlist = useCallback((itemsArray) => {
     return itemsArray.map(item => {
       if (wishlistCakes.some(wishlistItem => wishlistItem.id === item.id)) {
         return {
@@ -749,13 +749,13 @@ useEffect(() => {
         };
       }
     });
-  };
+  },[wishlistCakes]);
 
   useEffect(() => {
     setCakeListArray(prevFilteredProducts => updateIsInCakeWishlist(prevFilteredProducts));
     setRandomizedCakes(prevRandomizedItems => updateIsInCakeWishlist(prevRandomizedItems));
     setRandomizedCakesSecond(prevRandomizedItems => updateIsInCakeWishlist(prevRandomizedItems));
-  }, [wishlistCakes]);
+  }, [updateIsInCakeWishlist]);
 
   // Cart
     // Initiate cake shop cart array
