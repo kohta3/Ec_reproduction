@@ -99,7 +99,8 @@ const FarzaaContextProvider = ({ children }) => {
 
   
   useEffect(() => {
-    setInterval(() => setNewTime(), 1000);
+    const interval = setInterval(() => setNewTime(), 1000);
+    return () => clearInterval(interval);
   }, [setNewTime]);
   
   // Product Quick View Modal
