@@ -1199,15 +1199,19 @@ img {
   font-size: 18px;
   font-family: "Kanit", sans-serif;
   font-weight: 400;
+  height: 108px;
+  overflow: hidden;
 }
 @media screen and (max-width: 1199px) {
   .fz-1-single-product .fz-single-product__title {
     text-align: center;
+    height: 90px;
   }
 }
 @media screen and (max-width: 991px) {
   .fz-1-single-product .fz-single-product__title {
     font-size: 16px;
+    height: 72px;
   }
 }
 .fz-1-single-product .fz-single-product__title:hover,
@@ -10877,4 +10881,3 @@ a.fz-nav-link.fz-submenu-nav-link.sub-menu-link:hover {
     padding-left: 5px;
   }
 }
-

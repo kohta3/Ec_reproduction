@@ -208,6 +208,10 @@
 
             .fz-logo {
                 margin-bottom: 35px;
+                @include sm {
+                    width: 80%;
+                    object-fit: contain;
+                }
             }
 
             &__txt {

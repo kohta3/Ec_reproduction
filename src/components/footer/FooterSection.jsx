@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 const FooterSection = () => {
     const currentYear = new Date().getFullYear();
@@ -14,10 +15,7 @@ const FooterSection = () => {
                         <div className="fz-footer-widget">
                             <h5 className="fz-footer-widget__title">サイトについて</h5>
                             <ul>
-                                <li><Link href="./">Shop on Facebook</Link></li>
-                                <li><Link href="./">Shop on Ebay</Link></li>
-                                <li><Link href="/shop">Shop All</Link></li>
-                                <li><Link href="./">Coupons and Discounts</Link></li>
+                                <li><Link href="/">ホーム</Link></li>
                             </ul>
                         </div>
                     </div>
@@ -39,29 +37,14 @@ const FooterSection = () => {
                         <div className="fz-footer-widget">
                             <h5 className="fz-footer-widget__title">ヘルプ</h5>
                             <ul>
-                                <li><Link href="/about">Our Story</Link></li>
-                                <li><Link href="/blog">Blog & Press</Link></li>
-                                <li><Link href="./">Order History</Link></li>
-                                <li><Link href="./">Wish List</Link></li>
-                                <li><Link href="./">Terms & Conditions</Link></li>
+                                <li><Link href="/contact">お問い合わせ</Link></li>
                             </ul>
                         </div>
                     </div>
 
                     <div className="col-xxl-2 col-lg-3 col-md-4 col-6 col-xxs-12">
-                        <div className="fz-footer__contact-info">
-                            <h5 className="fz-footer-widget__title">ストアの情報</h5>
-                            <ul>
-                                <li>
-                                    <Link href="./"><i className="fa-light fa-location-dot"></i> 16 Rr 2, Ketchikan, Alaska 99901, USA</Link>
-                                </li>
-                                <li>
-                                    <Link href="tel:9072254144"><i className="fa-light fa-phone"></i> (907) 225-4144</Link>
-                                </li>
-                                <li>
-                                    <Link href="mailto:info@webmail.com"><i className="fa-light fa-envelope-open-text"></i>info@webmail.com</Link>
-                                </li>
-                            </ul>
+                        <div className="fz-footer__contact-info" style={{position:"relative"}}>
+                            <Image fetchpriority="high" src='/assets/images/logo/logo_black.png' alt="footer logo" className="fz-logo" width={400} height={500} style={{width:"95%"}} />
                         </div>
                     </div>
                 </div>

@@ -1,9 +1,8 @@
-import React, { useContext, useState,useEffect,useCallback } from 'react';
+import React, { useContext, useState, useEffect, useCallback } from 'react';
 import { FarzaaContext } from '../../context/FarzaaContext';
 import { allProductList } from '../../data/Data';
 import { useSearchParams } from "next/navigation";
 import { useRouter } from 'next/router';
-
 
 const categories = [
     { name: null, label: 'すべての商品' },
@@ -18,7 +17,6 @@ const ProductCategoryList = () => {
     const [activeCategory, setActiveCategory] = useState(null);
 
     const router = useRouter();
-    const [key, setKey] = useState(0);
 
     const handleCategoryClick = useCallback((category) => {
         handleCategoryFilter(category);
@@ -30,18 +28,15 @@ const ProductCategoryList = () => {
 
     useEffect(() => {
         const handleRouteChange = (url) => {
-            if (url === router.asPath) {setKey(prev => prev + 1);}} 
-            if (categoryFromURL) {
-                handleCategoryClick(categoryFromURL);            
-            }else{
-                handleCategoryClick(null);
-            }    
-            router.events.on('routeChangeComplete', handleRouteChange);
-
-            return () => {
+            if (url === router.asPath && categoryFromURL !== activeCategory) {
+                handleCategoryClick(categoryFromURL || null);
+            }
+        };
+        router.events.on('routeChangeComplete', handleRouteChange);
+        return () => {
             router.events.off('routeChangeComplete', handleRouteChange);
-            };
-    }, [router.asPath, router.events,categoryFromURL, handleCategoryClick]); 
+        };
+    }, [router.asPath, router.events, categoryFromURL, handleCategoryClick, activeCategory]); 
 
     return (
         <section className="sidebar-single-area product-categories-area">

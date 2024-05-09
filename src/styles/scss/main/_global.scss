@@ -99,6 +99,19 @@ img {
     max-width: 100%;
     height: auto;
 }
+img.fz-logo{
+    object-fit: contain;
+    width: 100%;
+    @include lg {
+        width: 90%;
+    }
+    @include md {
+        width: 65%;
+    }
+    @include sm {
+        width: 55%;
+    }
+  }
 
 .bg-default {
     background-size: cover;

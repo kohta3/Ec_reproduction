@@ -1,5 +1,6 @@
 .featured-product-section {
     padding-top: 100px;
+    padding-bottom: 100px;
 
     @include md {
         padding-top: 60px;
@@ -55,3 +56,23 @@
         }
     }
 }
+
+.fz-1-single-product .fz-single-product__title {
+    font-size: 18px;
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    height: 80px;
+    overflow: hidden;
+  }
+  @media screen and (max-width: 1199px) {
+    .fz-1-single-product .fz-single-product__title {
+      text-align: center;
+      height: 72px;
+    }
+  }
+  @media screen and (max-width: 991px) {
+    .fz-1-single-product .fz-single-product__title {
+      font-size: 16px;
+      height: 54px;
+    }
+  }

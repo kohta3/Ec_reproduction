@@ -31,7 +31,7 @@ const HeaderSection = () => {
                     <div className="col-lg-2 col-md-6 col-9">
                         <div className="fz-logo-container text-lg-center text-start">
                             <Link href="/" style={{position:"relative"}}>
-                                <Image fetchpriority="high" src='/assets/images/logo-3.png' alt="logo" className="fz-logo" width={400} height={500} style={{width:"100%"}} />
+                                <Image fetchpriority="high" src='/assets/images/logo/logo_black.png' alt="logo" className="fz-logo" width={800} height={250} />
                             </Link>
                         </div>
                     </div>
