@@ -1,5 +1,5 @@
 import { allCakeList, allProductList, blogList, ornamentList } from '../data/Data';
-import { createContext, useCallback, useEffect, useRef, useState } from 'react';
+import { createContext, useEffect, useRef, useState } from 'react';
 import { toast } from 'react-toastify';
 
 const defaultContextValue = {
@@ -67,7 +67,11 @@ const FarzaaContextProvider = ({ children }) => {
     seconds: 0,
   });
 
-  const setNewTime = useCallback(() => {
+  useEffect(() => {
+    setInterval(() => setNewTime(), 1000);
+  }, []);
+
+  const setNewTime = () => {
     if (countdownDate) {
       const currentTime = new Date().getTime();
 
@@ -95,14 +99,8 @@ const FarzaaContextProvider = ({ children }) => {
 
       setIsTimerState({ days: days, hours: hours, minutes, seconds });
     }
-  }, [countdownDate])
+  };
 
-  
-  useEffect(() => {
-    const interval = setInterval(() => setNewTime(), 1000);
-    return () => clearInterval(interval);
-  }, [setNewTime]);
-  
   // Product Quick View Modal
   const [isProductViewOpen, setIsProductViewOpen] = useState(false)
 
@@ -564,21 +562,11 @@ useEffect(() => {
   // random ornament array
   const [randomizedItems, setRandomizedItems] = useState([]);
 
-  // Function to shuffle an array using Fisher-Yates algorithm
-  const shuffleArray = useCallback((array) => {
-    const shuffledArray = [...array];
-    for (let i = shuffledArray.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
-    }
-    return shuffledArray;
-  },[]);
-
   useEffect(() => {
     // Shuffle the array and store the shuffled order initially
     const shuffledItems = shuffleArray(jeweleryArray);
     setRandomizedItems(shuffledItems);
-  }, [jeweleryArray,shuffleArray]); // Empty dependency array, so the shuffle is done once on mount
+  }, []); // Empty dependency array, so the shuffle is done once on mount
 
   const handleRemoveJeweleryItemWishlist = (itemId) => {
     const updatedItems = jeweleryWishlist.filter(item => item.id !== itemId);
@@ -608,7 +596,7 @@ useEffect(() => {
     }
   };
 
-  const updateIsInWishlist = useCallback((itemsArray) => {
+  const updateIsInWishlist = (itemsArray) => {
     return itemsArray.map(item => {
       if (jeweleryWishlist.some(wishlistItem => wishlistItem.id === item.id)) {
         return {
@@ -622,12 +610,12 @@ useEffect(() => {
         };
       }
     });
-  },[jeweleryWishlist]);
+  };
 
   useEffect(() => {
     setJeweleryArray(prevFilteredProducts => updateIsInWishlist(prevFilteredProducts));
     setRandomizedItems(prevRandomizedItems => updateIsInWishlist(prevRandomizedItems));
-  }, [updateIsInWishlist]);
+  }, [jeweleryWishlist]);
 
   // Jewelery add to cart array
   const [jeweleryAddToCart, setJeweleryAddToCart] = useState([]);
@@ -698,7 +686,7 @@ useEffect(() => {
     // Create a new shuffled array for the second state variable
     const shuffledCakesSecond = shuffleArray(cakeSlice.slice()); // Create a copy of cakeSlice before shuffling
     setRandomizedCakesSecond(shuffledCakesSecond);
-  }, [cakeSlice,shuffleArray]); // Empty dependency array, so the shuffle is done once on mount
+  }, []); // Empty dependency array, so the shuffle is done once on mount
 
   // Wishlist
 
@@ -736,7 +724,7 @@ useEffect(() => {
       toast.error('Item not found in All Cake List.');
     }
   };
-  const updateIsInCakeWishlist = useCallback((itemsArray) => {
+  const updateIsInCakeWishlist = (itemsArray) => {
     return itemsArray.map(item => {
       if (wishlistCakes.some(wishlistItem => wishlistItem.id === item.id)) {
         return {
@@ -750,13 +738,13 @@ useEffect(() => {
         };
       }
     });
-  },[wishlistCakes]);
+  };
 
   useEffect(() => {
     setCakeListArray(prevFilteredProducts => updateIsInCakeWishlist(prevFilteredProducts));
     setRandomizedCakes(prevRandomizedItems => updateIsInCakeWishlist(prevRandomizedItems));
     setRandomizedCakesSecond(prevRandomizedItems => updateIsInCakeWishlist(prevRandomizedItems));
-  }, [updateIsInCakeWishlist]);
+  }, [wishlistCakes]);
 
   // Cart
     // Initiate cake shop cart array
@@ -816,6 +804,16 @@ useEffect(() => {
         toast.warning('Item not found in allProductList.');
       }
     };
+
+  // Function to shuffle an array using Fisher-Yates algorithm
+  const shuffleArray = (array) => {
+    const shuffledArray = [...array];
+    for (let i = shuffledArray.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledArray[i], shuffledArray[j]] = [shuffledArray[j], shuffledArray[i]];
+    }
+    return shuffledArray;
+  };
 
   // Right Sidebar
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
