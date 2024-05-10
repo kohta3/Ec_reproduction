@@ -1,8 +1,8 @@
 import Head from 'next/head'
 
 const CommonMeta = (props) => {
-    const title = "Photo Application"; 
-    const description = "This is Photo Application!!!!" ;
+    const title = "となりのプロテイン"; 
+    const description = "【VALX公式】山本義徳監修の高品質のこだわり抜いたプロテインとサプリメントを販売するバルクス公式オンラインストア。VALXはアスリートだけでなく、誰にでもおすすめのサプリメントを提供します。「本物」を追求し、時代の最先端を行くフィットネスブランドです。" ;
 
   return (
     <Head>

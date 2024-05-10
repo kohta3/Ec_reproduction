@@ -27,19 +27,6 @@ const RelatedProductSection = () => {
                                     <span className="btn-txt">add To wishlist</span>
                                     <span className="btn-icon">{item.isInWishlist? (<i className="fa-solid fa-heart"></i>):(<i className="fa-light fa-heart"></i>)}</span>
                                 </button>
-
-                                <button 
-                                className="fz-add-to-cart-btn"
-                                onClick={() => addToCart(item.id)}
-                                >
-                                    <span className="btn-txt">add To cart</span>
-                                    <span className="btn-icon"><i className="fa-light fa-cart-shopping"></i></span>
-                                </button>
-
-                                <button className="fz-add-to-compare-btn">
-                                    <span className="btn-txt">select to compare</span>
-                                    <span className="btn-icon"><i className="fa-light fa-arrow-right-arrow-left"></i></span>
-                                </button>
                             </div>
                         </div>
 
@@ -47,7 +34,7 @@ const RelatedProductSection = () => {
                             <Link href="#" className="fz-single-product__title">{item.name}</Link>
                             <div className="fz-single-product__price-rating">
                                 <p className="fz-single-product__price">
-                                    <span className="current-price">${item.price}</span>
+                                    <span className="current-price">&yen;{item.price.toLocaleString()}</span>
                                 </p>
                             </div>
                         </div>
