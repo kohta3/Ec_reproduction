@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import BreadcrumbSection from '../breadcrumb/BreadcrumbSection'
 import ProductDetailSection from '../product/ProductDetailSection'
 import RelatedProductSection from '../product/RelatedProductSection'
+import HeadSection from "../commonMeta/HeadSection";
 
 const ShopDetailsMain = () => {
   const [currents, setItems] = useState([
@@ -12,6 +13,7 @@ const ShopDetailsMain = () => {
 
   return (
     <>
+      <HeadSection />
       <BreadcrumbSection title={"Shop Details"} current={currents}/>
       <ProductDetailSection/>
       <RelatedProductSection/>
