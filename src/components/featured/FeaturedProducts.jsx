@@ -36,7 +36,7 @@ const FeaturedProducts = () => {
                         </div>
 
                         <div className="fz-single-product__txt">
-                            <h3 className="fz-single-product__title"><Link href="/shop-details">{item.name}</Link></h3>
+                            <h3 className="fz-single-product__title"><Link href={"/shop/" + item.name}>{item.name}</Link></h3>
                             <p className="fz-single-product__price">
                                 <span className="current-price">&yen;{item.price.toLocaleString()}</span>
                                 {item.oldPrice?<span className="prev-price text-decoration-line-through">&yen;{item.oldPrice.toLocaleString()}</span>:""}
