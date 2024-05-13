@@ -9,7 +9,7 @@ const nextConfig = {
         hostname: 'm.media-amazon.com'
       },
     ]
-  }
+  },
 };
 
 export default nextConfig;
