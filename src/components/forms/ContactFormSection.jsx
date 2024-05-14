@@ -63,20 +63,15 @@ const ContactFormSection = () => {
     const sendContact = async (e) => {
         e.preventDefault();
 
-        if (!fullName || !isValidEmail(email) || !confirmEmail(confirm) || !selectedType || !about || !allow) {
-            alert('フォームの入力を確認してください。');
-            return;
-        }
-
         const formData = new FormData();
-        formData.append('name', fullName);
-        formData.append('email', email);
+        formData.append('name', document.getElementById('name').value);
+        formData.append('email', document.getElementById('email').value);
         formData.append('inquiry', selectedType);
-        formData.append('details', about);
+        formData.append('details', document.getElementById('details').value);
         formData.append('allowed', allow);
 
         try {
-            const response = await fetch('https://script.google.com/macros/s/AKfycbwwqvPJFhr85pLBVyNEYZkd8OBl9i_qFFB1NPaEHamRnvFlcrCgD8xexJMD_C3RNdYa/exec', {
+            const response = await fetch('https://script.google.com/macros/s/AKfycbzK7qa8ETNu9gxg-b2Q45zUIC2zr0PU_ZqLiIbHflo8Pf_mga-RI1zicJVWeI34XA1o/exec', {
                 method: 'POST',
                 body: formData,
             });
@@ -94,7 +89,7 @@ const ContactFormSection = () => {
     return (
         <div className="container mt-1">
             <h2 className="w-100 mb-5" style={{ textAlign: "center" }}>Contact</h2>
-            <form>
+            <form method="POST" onSubmit={sendContact}>
                 <div className="mb-3">
                     <label htmlFor="name" className="form-label">お名前<em className='inputNeed'>必須</em></label>
                     <input type="text" className={"form-control" + (fullName?" border-success ":" border-danger ")} id="name" name='name' required onChange={(e) => { handleFullName(e) }} />
@@ -125,7 +120,7 @@ const ContactFormSection = () => {
                         <input type="checkbox" className={(allow?" border-success ":" border-danger ")} id="allowed" name="allowed" style={{ marginRight: "10px" }} required checked={allow} onChange={handleAllow} />個人情報の取り扱いに同意する<em className='inputNeed'>必須</em>
                     </label>
                 </div>
-                <button type="submit" className="btn btn-dark w-100" id='submit' disabled onClick={(e)=>{sendContact(e)}}>送信</button>
+                <button type="submit" className="btn btn-dark w-100" id='submit' disabled >送信</button>
             </form>
         </div>
     );
