@@ -21,7 +21,7 @@ const ShopDetailsMain = () => {
 
   return (
     <>
-      <HeadSection title={product.name} />
+      <HeadSection title={product.name?product.name:null} />
       <BreadcrumbSection title={"Shop Details"} current={currents}/>
       <ProductDetailSection product = {product} />
       <RelatedProductSection/>
