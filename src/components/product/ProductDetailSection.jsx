@@ -3,24 +3,17 @@ import ProductDetailSlider from '../sliders/ProductDetailSlider';
 import ProductDetailTextSection from './ProductDetailTextSection';
 import ProductDescTabPane from './ProductDescTabPane';
 import ProductReviewTabPane from './ProductReviewTabPane';
-import { useState, useContext } from 'react';
-import { useRouter } from 'next/router';
-import { FarzaaContext } from '../../context/FarzaaContext';
+import { useState } from 'react';
 
-const ProductDetailSection = () => {
+const ProductDetailSection = (props) => {
     const [activeTab, setActiveTab] = useState('description');
 
     const handleTabChange = (tab) => {
         setActiveTab(tab);
     };
 
-    const router = useRouter();
-    const { pid } = router.query;
+    const product = props.product;
 
-    const {
-        paginatedProducts
-      } = useContext(FarzaaContext)
-      const product = paginatedProducts.find(({id}) => id === parseInt(pid,10));
   return (
     <section className="fz-product-details">
         <div className="container">

@@ -8,7 +8,7 @@ const ShopMain = () => {
 
   return (
     <>
-      <HeadSection />
+      <HeadSection title="商品一覧" />
       <BreadcrumbSection title={"Shop Page"} current={currents}/>
       <ShopAreaSection/>
     </>

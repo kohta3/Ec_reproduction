@@ -8,7 +8,7 @@ const ContactMain = () => {
 
   return (
     <>
-      <HeadSection />
+      <HeadSection title="お問い合わせ"/>
       <BreadcrumbSection title={"Contact Page"} current={currents} />
       <ContactSection />
       {/* <LocationSection/> */}
