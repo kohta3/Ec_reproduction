@@ -18,10 +18,9 @@ const ShopDetailsMain = () => {
 
   const { paginatedProducts } = useContext(FarzaaContext);
   const product = paginatedProducts.find(({id}) => id === parseInt(pid,10));
-
   return (
     <>
-      <HeadSection title={product.name?product.name:null} />
+      <HeadSection title="商品詳細"/>
       <BreadcrumbSection title={"Shop Details"} current={currents}/>
       <ProductDetailSection product = {product} />
       <RelatedProductSection/>
