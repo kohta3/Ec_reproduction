@@ -40,6 +40,16 @@ const CommonMeta = (props) => {
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png"></link>
       <link rel="icon" type="image/png" sizes="48x48" href="/favicon_48x48.png"></link>
       <link rel="icon" type="image/png" sizes="64x64" href="/favicon_64x64.png"></link>
+
+      {/* <!-- Google tag (gtag.js) --> */}
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1RMTCDRVJ"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-Z1RMTCDRVJ');
+      </script>
     </Head>
   )}
 

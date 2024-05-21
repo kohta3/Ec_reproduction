@@ -20,7 +20,7 @@ const ShopDetailsMain = () => {
   const product = paginatedProducts.find(({id}) => id === parseInt(pid,10));
   return (
     <>
-      <HeadSection title="商品詳細"/>
+      <HeadSection title="商品詳細d"/>
       <BreadcrumbSection title={"Shop Details"} current={currents}/>
       <ProductDetailSection product = {product} />
       <RelatedProductSection/>
