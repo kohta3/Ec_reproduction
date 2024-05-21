@@ -3,18 +3,18 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 const CommonMeta = (props) => {
-    const title = props.title?props.title + " | となりのプロテイン":"となりのプロテイン"; 
-    const description = "プロテイン(プロテイン サプリメント)をお探しならとなりのプロテインへ。Amazonで人気のプロテインを厳選して紹介。健康的なライフスタイルをサポートする高品質のプロテインを見つけるならこちら！ダイエットや筋肉増強に最適なプロテインをお手頃価格で購入できます。" ;
-    
-    const router = useRouter();
-    const [currentUrl, setCurrentUrl] = useState('');
+  const title = props.title ? props.title + " | となりのプロテイン" : "となりのプロテイン";
+  const description = "プロテイン(プロテイン サプリメント)をお探しならとなりのプロテインへ。Amazonで人気のプロテインを厳選して紹介。健康的なライフスタイルをサポートする高品質のプロテインを見つけるならこちら！ダイエットや筋肉増強に最適なプロテインをお手頃価格で購入できます。";
 
-    useEffect(() => {
-        if (typeof window !== 'undefined') {
-            const fullUrl = `${window.location.protocol}//${window.location.host}${router.asPath}`;
-            setCurrentUrl(fullUrl);
-        }
-    }, [router.asPath]);
+  const router = useRouter();
+  const [currentUrl, setCurrentUrl] = useState('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const fullUrl = `${window.location.protocol}//${window.location.host}${router.asPath}`;
+      setCurrentUrl(fullUrl);
+    }
+  }, [router.asPath]);
 
   return (
     <Head>
@@ -23,13 +23,13 @@ const CommonMeta = (props) => {
       <title>{title}</title>
       <meta property="description" content={description} />
       <meta name="keywords" content="Amazon, プロテイン, ダイエット, 筋肉増強, 健康, 高品質, お手頃価格" />
-      <meta name="robots" content="index, follow"/>
+      <meta name="robots" content="index, follow" />
 
       <meta property="og:title" content={title} />
       <meta property="og:description" content='高品質・お手頃価格のプロテインを厳選紹介。健康的なライフスタイルをサポート。' />
-      <meta property="og:image" content="/assets/images/ogp_image.png"/>
-      <meta property="og:url" content={currentUrl}/>
-      <meta property="og:type" content="website"/>
+      <meta property="og:image" content="/assets/images/ogp_image.png" />
+      <meta property="og:url" content={currentUrl} />
+      <meta property="og:type" content="website" />
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Amazonのプロテイン特集" />
@@ -43,15 +43,17 @@ const CommonMeta = (props) => {
 
       {/* <!-- Google tag (gtag.js) --> */}
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z1RMTCDRVJ"></script>
-      <script>
+      <script dangerouslySetInnerHTML={{
+        __html: `
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-Z1RMTCDRVJ');
-      </script>
+      `,
+      }} />
     </Head>
-  )}
+  )
+}
 
 
 export default CommonMeta;
