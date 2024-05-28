@@ -37,6 +37,7 @@ const CommonMeta = (props) => {
         <meta name="twitter:title" content="Amazonのプロテイン特集" />
         <meta name="twitter:description" content="高品質・お手頃価格のプロテインを厳選紹介。健康的なライフスタイルをサポート。" />
         <meta name="twitter:image" content="/assets/images/ogp_image.png" />
+        <meta name="google-site-verification" content="Xe4UyD769hjbHYhP9p8k-diRTHXLBOo0nv-1irly3gs" />
 
         <link rel="icon" type="image/png" sizes="16x16" href="/favicon_16x16.png"></link>
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon_32x32.png"></link>
