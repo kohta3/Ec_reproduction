@@ -45,16 +45,6 @@ const ProductDetailSection = (props) => {
                                     商品の詳細
                                 </Nav.Link>
                             </Nav.Item>
-                            {/* <Nav.Item className="nav-item" role="presentation">
-                                <Nav.Link 
-                                    className="nav-link" 
-                                    eventKey='review'
-                                    id="review-tab" 
-                                    role="button"
-                                >
-                                    Reviews
-                                </Nav.Link>
-                            </Nav.Item> */}
                         </Nav>
                         <Tab.Content>
                             <Tab.Pane eventKey='description' className={`tab-pane ${activeTab === 'description' ? 'show active' : ''}`}>

@@ -15,12 +15,11 @@ const ShopDetailsMain = () => {
 
   const router = useRouter();
   const { pid } = router.query;
-
-  const { paginatedProducts } = useContext(FarzaaContext);
-  const product = paginatedProducts.find(({id}) => id === parseInt(pid,10));
+  const { filteredProducts } = useContext(FarzaaContext);
+  const product = filteredProducts.find(({id}) => id === parseInt(pid,10));
   return (
     <>
-      <HeadSection title="商品詳細d"/>
+      <HeadSection title="商品詳細"/>
       <BreadcrumbSection title={"Shop Details"} current={currents}/>
       <ProductDetailSection product = {product} />
       <RelatedProductSection/>
