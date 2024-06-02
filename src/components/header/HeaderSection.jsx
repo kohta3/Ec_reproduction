@@ -9,12 +9,7 @@ const HeaderSection = () => {
     const {
         isHeaderFixed,
         handleWishlistShow,
-        handleCartShow,
-        cartItemAmount,
         wishlist,
-        cartItems,
-        handleQuantityChange,
-        handleRemoveItem,
         handleRemoveItemWishlist,
         handleSidebarOpen,
         wishlistItemAmount

@@ -23,7 +23,7 @@ const RightSideBar = () => {
                         <MobileMenuSection navigate={closeAndNavigate}/>
                     </div>
                 </div>
-                <div className="fz-offcanvas-main-sideinfo-section">
+                {/* <div className="fz-offcanvas-main-sideinfo-section">
 
                     <div className="fz-offcanvas-main-sideinfo">
                         <div className="fz-offcanvas-main-search mb-45 d-block d-sm-none">
@@ -83,7 +83,7 @@ const RightSideBar = () => {
                         </div>
 
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
     )

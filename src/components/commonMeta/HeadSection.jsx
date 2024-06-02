@@ -4,8 +4,8 @@ import { useRouter } from 'next/router'
 import { useEffect, useState } from 'react'
 
 const CommonMeta = (props) => {
-  const title = props.title ? props.title + " | となりのプロテイン" : "となりのプロテイン";
-  const description = "プロテイン(プロテイン サプリメント)をお探しならとなりのプロテインへ。Amazonで人気のプロテインを厳選して紹介。健康的なライフスタイルをサポートする高品質のプロテインを見つけるならこちら！ダイエットや筋肉増強に最適なプロテインをお手頃価格で購入できます。";
+  const title = props.title ? props.title + " | プロテインTOKYO" : "プロテインTOKYO";
+  const description = "プロテイン(プロテイン サプリメント)をお探しならプロテインTOKYOへ。Amazonで人気のプロテインを厳選して紹介。健康的なライフスタイルをサポートする高品質のプロテインを見つけるならこちら！ダイエットや筋肉増強に最適なプロテインをお手頃価格で購入できます。";
 
   const router = useRouter();
   const [currentUrl, setCurrentUrl] = useState('');
