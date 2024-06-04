@@ -73,7 +73,7 @@ const allProductList = [
         id:1,
         imgSrc:["https://m.media-amazon.com/images/I/81CjPijk3uL._AC_SX679_.jpg","https://m.media-amazon.com/images/I/51VN3mUCXUL._AC_US100_.jpg","https://m.media-amazon.com/images/I/71yd2fEqHRL._AC_SX679_.jpg","https://m.media-amazon.com/images/I/61As9IfAV5L._AC_SX679_.jpg","https://m.media-amazon.com/images/I/61As9IfAV5L._AC_SX679_.jpg","https://m.media-amazon.com/images/I/718XbMlDIzL._AC_SX679_.jpg"],
         name:"ザバス(SAVAS) ソイプロテイン100 ココア味 900g 明治",
-        category:"ソイプロテイン",
+        category:"ソイプロテイ",
         price:3450,
         affiliate:"https://www.amazon.co.jp/%E3%82%B6%E3%83%90%E3%82%B9-SAVAS-%E3%82%BD%E3%82%A4%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3100-%E3%82%B3%E3%82%B3%E3%82%A2%E5%91%B3%E3%80%9045%E9%A3%9F%E5%88%86%E3%80%91-945g/dp/B08DD5RB36/ref=sr_1_6?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&crid=1XV4H13L600DN&dib=eyJ2IjoiMSJ9.hOPlSOeOMGD0TwiEDLxrIL1iKlGYglE11yAuIw2A5ZcewfHdIW9-3rI0u8XQ4LFPVMtg1jamNgfOfUFhXilaUKq_gtfvtV8ZjBs8rdH8CAfvPUc138U18V74fEF8UhUr0vmnruSfegHCbO_dx_eicdCRTrROw2-ADBlt_CDhB-r-CJh_orCk-LONgAD-Mfasvy8UyRXG0B5ISA5DhGSBMucWpRPGhULEwswT5BNcgRIbYOlN1dtcR4LHWyI_xTSd-MK-25lNNYjo2t9YsLgcFODeJ8rI62rVQecA9G0fBZA.yvPQj5tC-CtHAdET_2kaQWQ5Q9ZHP_lV96b064k8SUA&dib_tag=se&keywords=%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3&qid=1714230489&sprefix=%E3%83%97%E3%83%AD%E3%83%86%E3%82%A4%E3%83%B3%2Caps%2C210&sr=8-6",
         description:[
